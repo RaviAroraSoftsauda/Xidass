@@ -1,0 +1,40 @@
+@import 'page2';
+@import 'page3';
+@import 'home';
+@import 'descriptiveNavigation';
+@import 'page3v1';
+@import 'tabs';
+@import 'bootstrap';
+* {
+    box-sizing: border-box;
+}
+
+.page-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-enter {
+    opacity: 0;
+}
+
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+
+.item-exit {
+    opacity: 1;
+}
+
+.item-exit-active {
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+
+@media screen and (max-width:1024px) {
+    .page-container {
+        width: 95%;
+    }
+}

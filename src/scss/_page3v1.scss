@@ -1,0 +1,29 @@
+#page2-section4 {
+    height: 1000px;
+    .containerfixed {
+        //  position: fixed;
+        margin-top: 5%;
+        margin-left: 0px;
+        padding: 0px 30px;
+        position: sticky;
+        top: 200px;
+    }
+    @media screen and (max-width:1324px) {
+        .containerfixed {
+            //  position: fixed;
+            margin-top: 5%;
+        }
+    }
+    @media screen and (max-width:800px) {
+        .containerfixed {
+            //  position: fixed;
+            margin-top: 5%;
+        }
+    }
+    @media screen and (max-width:600px) {
+        .containerfixed {
+            //  position: fixed;
+            margin-top: 5%;
+        }
+    }
+}
