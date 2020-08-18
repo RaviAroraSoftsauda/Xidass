@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react'
 import image from "../../image/Exports/PNG/FaradayHomePicmin.png"
 
-const About
- = () => {
+const About= () => {
     return (
         <div id="section5" className="container" style={{ backgroundColor:"#d3d3d34d",padding: "50px"}}>
            
@@ -37,7 +36,7 @@ const About
                      </div>
                      
                  </div>
-                 <a href="#" className="button" style={{backgroundColor:"red",border:"none",width:"200px"}}>Got to Xidas.com</a>
+                 <a href="#" className="button" style={{backgroundColor:"red",border:"none",width:"200px"}}>Go to Xidas.com</a>
              </div>
 
              

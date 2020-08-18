@@ -9,7 +9,7 @@ const HomeBanner = (props) => {
     const addopacity = () => {
         setTimeout(() => {
             setOpacity("1");
-        }, 5000)
+        }, 3000)
     }
     useLayoutEffect(() => {
 

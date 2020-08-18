@@ -12,7 +12,7 @@ body {
 }
 
 $primary-color:#D7D6D7;
-$secondary-color:#5cdfb7;
+$secondary-color: $red;
 
 /*#c94f51
 styling Navbar
@@ -98,9 +98,9 @@ li a {
 
 #section1 h1 {
     font-size: 4rem;
-    font-weight: 1500;
+    font-weight: 900;
     /* style={{ marginTop: '50', color: '#D75440' }}*/
-    margin-top: 50;
+    margin-top: 50%;
     color: black;
     font-weight: normal;
     margin: 0;
@@ -117,10 +117,10 @@ li a {
 }
 
 .text-overlay {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    margin-top: -27%;
     left: 85px;
-    transform: translate(-0%, -50%);
+    transform: translate(-0%, -78%);
     color: black;
     transition: all .3s ease-in;
     opacity: 0;
@@ -139,7 +139,7 @@ li a {
 .text-overlay .button {
     transform: translate(0%, 10%);
     color: white;
-    background-color: #5cdfb7;
+    background-color: $red;
     margin-top: 35px;
 }
 
@@ -418,6 +418,9 @@ li a {
         box-sizing: border-box;
         margin: 0px;
     }
+    .text-overlay {
+        transform: translate(-0%, -60%);
+    }
     .text-overlay h1 {
         font-size: 2rem;
     }
@@ -462,12 +465,11 @@ li a {
     .text-overlay {
         font-size: 8px;
         width: 40%;
-        top: 50%;
         left: 5%;
-        transform: translate(0%, -50%);
+        transform: translate(0%, -65%);
     }
-    .text-overlay h1 {
-        font-size: 20px;
+    .text-overlay p {
+        font-size: 12px!important;
     }
     .md-text-center {
         text-align: center;
@@ -521,7 +523,7 @@ li a {
         border-bottom: 1px solid transparent;
     }
     #section1 h1 {
-        font-size: 1rem;
+        font-size: 2rem;
     }
     .text-overlay .button {
         margin: 5px;
@@ -535,5 +537,15 @@ li a {
     }
     .text-overlay p {
         line-height: 1rem;
+    }
+}
+
+@media screen and (max-width:535px) {
+    #section1 h1 {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .text-overlay p {
+        font-size: 10px;
     }
 }

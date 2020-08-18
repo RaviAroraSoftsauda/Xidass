@@ -1,5 +1,6 @@
-@import 'page2';
-@import 'page3';
+@import 'variable';
+@import 'power';
+@import 'shop';
 @import 'home';
 @import 'descriptiveNavigation';
 @import 'page3v1';
@@ -36,5 +37,37 @@
 @media screen and (max-width:1024px) {
     .page-container {
         width: 95%;
+    }
+}
+
+// --------------------------------
+//       NAVIGATION/HEADER            
+// --------------------------------
+.header-component-wrapper {
+    nav {
+        li {
+            a {
+                transition: 0.3s;
+                &.selected {
+                    color: $red;
+                }
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+button {
+    &.buy-button {
+        width: 140px !important;
+    }
+}
+
+.button {
+    &.new-button {
+        border-radius: 25px;
+        text-align: center;
     }
 }

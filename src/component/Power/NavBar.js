@@ -3,8 +3,8 @@ import logo from "../../assets/VP3 logo.png"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 const NavBar = () => {
     return (
-        <div className="stripe" id="page2-section1">
-            <div><button className="brand-btn" style={{ borderStyle: "none" }}><img src={logo} alt="..." style={{ width: "100%" }} /></button></div>
+        <div className="stripe" id="page2-section1" style={{ paddingLeft: 20 }}>
+            <div><button className="brand-btn" style={{ borderStyle: "none", marginRight: 85 }}><img src={logo} alt="..." style={{ width: "100%" }} /></button></div>
 
             <div >
 
