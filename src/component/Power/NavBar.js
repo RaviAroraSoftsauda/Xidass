@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../../assets/VP3 logo.png"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-const Section1 = () => {
+const NavBar = () => {
     return (
         <div className="stripe" id="page2-section1">
             <div><button className="brand-btn" style={{ borderStyle: "none" }}><img src={logo} alt="..." style={{ width: "100%" }} /></button></div>
@@ -27,4 +27,4 @@ const Section1 = () => {
     )
 }
 
-export default Section1
+export default NavBar

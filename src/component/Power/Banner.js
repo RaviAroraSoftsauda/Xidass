@@ -2,7 +2,7 @@ import React from 'react'
 import Image1 from './../../assets/Copy of Faraday Final Render (fileted) picture 2.2.png'
 
 
-const Section2 = () => {
+const Banner = () => {
     return (<>
    
     <div id="page2-section2" className="section">
@@ -24,4 +24,4 @@ const Section2 = () => {
     )
 }
 
-export default Section2;
+export default Banner;

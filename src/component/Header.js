@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from 'react'
+import React, { useState,useRef, useLayoutEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import white from './../image/Exports/PNG/Logo_Xidas_IOT_white_red-circle.png'
 import black from './../image/Exports/PNG/Logo_Xidas_IOT_full-color.png'
@@ -7,9 +7,7 @@ import { connect } from 'react-redux';
 import {logoutUser} from "../redux/actions/authAction"
 
 const Header = (props) => {
-  const togglemodal=()=>{
-      console.log("in");
-   }
+ let [header,setHeader]= useState(0);
    let auth;
    if(props.auth.isAuthenticated){
     auth=(<Link to="#"  >Hi,{props.auth.user.fname}
@@ -34,7 +32,7 @@ console.log(toggleMenu);
         }
 
     }
-    console.log(props);
+    console.log(pathname);
     return (
         <div id="header" className="header" style={{transition:"0.5s",position:props.position? "relative":"sticky"}}>
             <nav className="container" style={{ boxSizing: 'border-box' }}>
@@ -45,18 +43,18 @@ console.log(toggleMenu);
 
                     <ul>
                         <li>
-                            <Link to="/" style={{ color: pathname === "/" ? 'red' : "" }}> HOME</Link>
+                            <Link to="/" style={{ color: header === 0? 'red' : "" }} onClick={()=>setHeader(0)}> HOME</Link>
                         </li>
                         <li>
-                            <Link to="/power#page2-section3" style={{ color: pathname === "/power" ? 'red' : "" }}>POWER</Link>
+                            <Link to="/power#page2-section3" style={{ color: header === 1 ? 'red' : "" }} onClick={()=>setHeader(1)}>POWER</Link>
                         </li>
                         <li>
-                            <Link to="/power#page2-section5" style={{ color: pathname === "/power#page2-section5" ? 'red' : "" }}>APPLICATIONS</Link>
+                            <Link to="/power#page2-section5" style={{ color: header === 2 ? 'red' : "" }} onClick={()=>setHeader(2)}>APPLICATIONS</Link>
                         </li>
                         <li>
-                            <Link to="/shops" style={{ color: pathname === "/shops" ? 'red' : "" }}>SHOP</Link>
+                            <Link to="/shops" style={{ color: header === 3 ? 'red' : "" }} onClick={()=>setHeader(3)}>SHOP</Link>
                         </li><li>
-                            <Link to="/about" style={{ color: pathname === "/about" ? 'red' : "" }}>ABOUT</Link>
+                            <Link to="/about" style={{ color: header === 4 ? 'red' : "" }} onClick={()=>setHeader(4)}>ABOUT</Link>
                         </li>
                     </ul>
                 </div>

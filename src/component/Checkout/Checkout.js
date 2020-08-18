@@ -1,6 +1,8 @@
 import React from 'react'
+
 import image from "../../image/Exports/PNG/FaradayHomePicmin.png"
-const Section = () => {
+
+const Checkout = () => {
     return (
         <div className="checkout-page">
             <div className="app-header">
@@ -45,6 +47,8 @@ const Section = () => {
                 </div>
             </div>
         </div>
+    
     )
 }
-export default Section
+
+export default Checkout

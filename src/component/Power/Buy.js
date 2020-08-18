@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 
-const Section6 = (props) => {
+const Buy = (props) => {
     const options = [
         { value: '1.8V', label: '1.8V' },
            { value: '2.5V', label: '2.5V' },
@@ -151,7 +151,7 @@ const Section6 = (props) => {
     )
 }
 
-Section6.propTypes = {
+Buy.propTypes = {
     addItem: PropTypes.func.isRequired,
     cart: PropTypes.object.isRequired,
     //errors: PropTypes.object.isRequired
@@ -162,4 +162,4 @@ const mapStateToProps = state => ({
    // errors: state.errors
 });
 
-export default connect(mapStateToProps,{addItem})(Section6)
+export default connect(mapStateToProps,{addItem})(Buy)

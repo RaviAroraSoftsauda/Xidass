@@ -1,6 +1,5 @@
 import React from 'react'
 import IconsWithName from '../utils/IconsWithName'
-import image from "../../image/Exports/PNG/FaradayHomePicmin.png"
 import motors from "../../assets/icon/FINAL_motors.png";
 import pumps from "../../assets/icon/FINAL_pumps.png"
 import compressors from "../../assets/icon/FINAL_compressors.png"
@@ -12,7 +11,7 @@ import automation from "../../assets/icon/FINAL_automation.png"
 import app1 from "../../image/app1.png"
 import app2 from "../../image/app2.png"
 import app3 from "../../image/app3.png"
-const Section5 = () => {
+const Application = () => {
     return (
         <div id="page2-section5" className="container section" style={{ marginTop: '50px', backgroundColor:"#d3d3d34d",paddingTop: "50px"}}>
             <div className="app-header">
@@ -63,18 +62,7 @@ const Section5 = () => {
             <div className="grid-2 application">
                 <div>
                     <h2>Power wireless sensors on other vibrating surface   </h2>
-                    {/* <div className="grid-4">
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                    </div>
-                    <div className="grid-4">
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                        <div><IconsWithName color="transparent" text="text1" /></div>
-                    </div> */}
+                    
                     <div>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit velit magni
                         facilis aliquid, hic, cumque porro qui eius laborum aperiam facere tempore voluptatum
@@ -91,4 +79,5 @@ const Section5 = () => {
     )
 }
 
-export default Section5
+export default Application
+

@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useState, Fragment } from 'react'
 
 import Imagebg from './../assets/Homepage Animation Turn.mp4'
 import ImageBg1 from './../image/Exports/Homepage Animation Turn (original) (2).mp4'
-const Section1 = (props) => {
+const HomeBanner = (props) => {
 
     const [opacity, setOpacity] = useState("0");
 
@@ -38,5 +38,5 @@ const Section1 = (props) => {
     )
 }
 
-export default Section1
+export default HomeBanner
 

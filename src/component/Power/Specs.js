@@ -1,29 +1,14 @@
 import React,{Component} from "react";
-import { section2Content, section1Content, section3Content } from './utils/contentForDescriptiveNavigation'
-
-import Image1 from '../image/Exports/PNG/FaradayHomePicmin.png'
-import Image2 from '../image/Exports/PNG/Logo_Xidas_IOT_full-color.png'
+import { section2Content, section1Content, section3Content } from '../utils/contentForDescriptiveNavigation'
+import Image1 from '../../image/Exports/PNG/FaradayHomePicmin.png'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { Controller, Scene } from 'react-scrollmagic';
-import image from "../assets/Page2Animation/Exploded.webm"
+import image from "../../assets/Page2Animation/Exploded.webm"
 import { VideoScroll } from 'react-video-scroll';
-const setStyles = (wrapperEl, videoEl, playbackRate) => {
-    wrapperEl.style.marginTop = `calc(180% - ${Math.floor(videoEl.duration) *
-      playbackRate +
-      'px'})`
-    wrapperEl.style.marginBottom = `calc(180% - ${Math.floor(videoEl.duration) *
-      playbackRate +
-      'px'})`
-  }
-
-  const setFrame = (props) => {
-    //  console.log(props);
+const setFrame = (props) => {
     const { duration, playbackRate } = props
-    //console.log(duration);
-    //console.log((Math.round((window.pageYOffset / 15 - playbackRate)/duration)));
     return Math.round((window.pageYOffset / 15 - playbackRate)/duration)
   }
-export default class Test extends Component{
+export default class Specs extends Component{
     constructor() {
         super();
         this.state = {
@@ -42,14 +27,10 @@ export default class Test extends Component{
     }
       
       onScroll(e){
-        const scrollY = window.scrollY //Don't get confused by what's scrolling - It's not the window
-        const pageY= window.pageYOffset*window.innerWidth;
-       // const scrollTop = this.myRef.current.scrollTop
-      //  console.log(`onScroll, window.scrollY: ${scrollY}`);
-       // console.log("pageyoffset",pageY);
+        const scrollY = window.scrollY 
        
         if(window.innerWidth<750){
-            console.log("in 1st");
+            
             if(scrollY>2100){
                 this.changeCuurentSection(0);
             }
@@ -59,7 +40,7 @@ export default class Test extends Component{
             if(scrollY>2600){
                 this.changeCuurentSection(2);
             }
-          //  console.log(window.innerWidth);
+          
 
         }
         if(window.innerWidth>750 && window.innerWidth<1300){
@@ -94,7 +75,6 @@ export default class Test extends Component{
       
     }
       render(){
-          const {currentSection}=this.state;
           return(
             <div id="page2-section4" className="section" >
             <div className="containerfixed grid-2" >
@@ -129,14 +109,10 @@ export default class Test extends Component{
                         </TabPanel>
                     </Tabs>
                    </div>
-                   {/* <video  muted style={{ width: '50vw', height: "30vh", margin: '0px' }} src={image} /> */}
+        
                    <VideoScroll
-                    // onLoad={props =>
-                    //     console.log(props)
-                    // }
                     setCurrentFrame={setFrame}
                     playbackRate={40}
-                    //style={{ position: 'sticky' }}
                     >
                     <video
                         tabIndex="0"

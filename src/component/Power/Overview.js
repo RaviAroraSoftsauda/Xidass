@@ -9,7 +9,7 @@ import icoIndustrialRuggred from "../../assets/icon/industrial:rugged.png"
 import iconPlugPlay from "../../assets/icon/plugandplay.png"
 import icoSmallSize from "../../assets/icon/smallsize.png"
 
-const Section3 = () => {
+const Overview = () => {
 
     const [image, setimage] = useState(HighPower)
 
@@ -51,4 +51,4 @@ const Section3 = () => {
          )
 }
 
-export default Section3
+export default Overview

@@ -4,14 +4,6 @@ import bouncer from "../../assets/Enclosure Animation Bop.webm"
 import {addItem} from "../../redux/actions/cartAction"
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {
-    Magnifier,
-    GlassMagnifier,
-    SideBySideMagnifier,
-    PictureInPictureMagnifier,
-    MOUSE_ACTIVATION,
-    TOUCH_ACTIVATION
-  } from "react-image-magnifiers-srcset";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Select from 'react-select';
 const options = [
@@ -20,7 +12,7 @@ const options = [
     { value: '3.3V', label: '3.3V' },
 ]
 
- class Section extends Component {
+ class Product extends Component {
     constructor() {
         super();
         this.state = {
@@ -37,28 +29,7 @@ const options = [
     changeCuurentSection = (section) => {
         this.setState({ currentSection: section });
     }
-    wheel(e) {
-
-        if (e.deltaY > 0) this.setState({ count: this.state.count + 1 });
-        if (e.deltaY < 0) this.setState({ count: this.state.count - 1 });
-        console.log(this.state.count%3);
-        console.info('x' + e.deltaX);
-        console.info('y' + e.deltaY);
-        console.info('z' + e.deltaZ);
-        console.info('mode' + e.deltaMode);
-        switch (this.state.count % 3) {
-            case -0:
-            case 0: this.changeCuurentSection(0);
-                break;
-            case -1:    
-            case 1: this.changeCuurentSection(1);
-                break;
-            case -2:    
-            case 2: this.changeCuurentSection(2);
-                break;
-            default:
-        }
-    }
+    
     plus(){
         this.setState({quantity:this.state.quantity+1});
     }
@@ -69,7 +40,6 @@ const options = [
     }
     handleChange = selectedOption => {
         this.setState({ selectedOption });
-        //console.log(`Option selected:`, selectedOption);
       };
     render() {
         const { currentSection,quantity,selectedOption } = this.state;
@@ -181,7 +151,7 @@ const options = [
     }
 }
 
-Section.propTypes = {
+Product.propTypes = {
     addItem: PropTypes.func.isRequired,
    cart: PropTypes.object.isRequired,
     //errors: PropTypes.object.isRequired
@@ -192,4 +162,4 @@ const mapStateToProps = state => ({
    // errors: state.errors
 });
 
-export default connect(mapStateToProps,{addItem})(Section)
+export default connect(mapStateToProps,{addItem})(Product)

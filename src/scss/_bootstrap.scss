@@ -112,6 +112,23 @@ button {
     border-image: initial;
 }
 
+.collapse:not(.show) {
+    display: none;
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
+
+.card-header {
+    padding: .75rem 0rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
 @media (min-width: 576px) {
     .col-sm-10 {
         flex: 0 0 83.333333%;
